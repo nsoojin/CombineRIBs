@@ -1,12 +1,12 @@
 #!/usr/bin/env sh
 
 # Configuration
-XCODE_TEMPLATE_DIR=$HOME'/Library/Developer/Xcode/Templates/File Templates/ModernRIB'
+XCODE_TEMPLATE_DIR=$HOME'/Library/Developer/Xcode/Templates/File Templates/CombineRIBs'
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
-# Copy ModernRIBs file templates into the local ModernRIBs template directory
+# Copy CombineRIBs file templates into the local CombineRIBs template directory
 xcodeTemplate () {
-  echo "==> Copying up ModernRIB Xcode file templates..."
+  echo "==> Copying up CombineRIBs Xcode file templates..."
 
   if [ -d "$XCODE_TEMPLATE_DIR" ]; then
     rm -R "$XCODE_TEMPLATE_DIR"
@@ -14,11 +14,11 @@ xcodeTemplate () {
   mkdir -p "$XCODE_TEMPLATE_DIR"
 
   cp -R $SCRIPT_DIR/*.xctemplate "$XCODE_TEMPLATE_DIR"
-  cp -R $SCRIPT_DIR/ModernRIB.xctemplate/ownsView/* "$XCODE_TEMPLATE_DIR/ModernRIB.xctemplate/ownsViewwithXIB/"
-  cp -R $SCRIPT_DIR/ModernRIB.xctemplate/ownsView/* "$XCODE_TEMPLATE_DIR/ModernRIB.xctemplate/ownsViewwithStoryboard/"
+  cp -R $SCRIPT_DIR/CombineRIB.xctemplate/ownsView/* "$XCODE_TEMPLATE_DIR/CombineRIB.xctemplate/ownsViewwithXIB/"
+  cp -R $SCRIPT_DIR/CombineRIB.xctemplate/ownsView/* "$XCODE_TEMPLATE_DIR/CombineRIB.xctemplate/ownsViewwithStoryboard/"
 }
 
 xcodeTemplate
 
 echo "==> ... success!"
-echo "==> ModernRIB have been set up. In Xcode, select 'New File...' to use ModernRIB templates."
+echo "==> CombineRIBs have been set up. In Xcode, select 'New File...' to use CombineRIBs templates."
