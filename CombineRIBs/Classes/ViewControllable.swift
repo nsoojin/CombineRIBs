@@ -28,8 +28,48 @@ public extension ViewControllable where Self: UIViewController {
     var uiviewController: UIViewController {
         return self
     }
+}
+
+public extension ViewControllable {
+    
+    var ui: UIViewController { self.uiviewController }
     
     var isBeingRemoved: Bool {
-        return self.isBeingDismissed || self.isMovingFromParent || (self.navigationController?.isBeingDismissed == true)
+        return self.ui.isBeingDismissed ||
+            self.ui.isMovingFromParent ||
+            (self.ui.navigationController?.isBeingDismissed == true)
+    }
+    
+    func presentViewControllable(_ viewControllable: ViewControllable, animated: Bool, style: UIModalPresentationStyle? = nil, completion: (() -> Void)? = nil) {
+        let presenting = self.ui
+        let viewController = viewControllable.ui
+        if let modalPresentationStyle = style {
+            viewController.modalPresentationStyle = modalPresentationStyle
+        }
+        presenting.present(viewController, animated: animated, completion: completion)
+    }
+    
+    func dismissViewControllableIfNeeded(_ viewControllable: ViewControllable, animated: Bool, completion: (() -> Void)? = nil) {
+        guard viewControllable.isBeingRemoved == false else { return }
+        let viewController = viewControllable.ui
+        guard let presenting = viewController.presentingViewController else { return }
+        presenting.dismiss(animated: animated, completion: completion)
+    }
+    
+    func pushViewControllable(_ viewControllable: ViewControllable, animated: Bool) {
+        guard let navigation = self.ui.navigationController else { return }
+        let viewController = viewControllable.ui
+        navigation.pushViewController(viewController, animated: animated)
+    }
+    
+    func popViewControllableIfNeeded(_ viewControllable: ViewControllable, animated: Bool) {
+        guard viewControllable.isBeingRemoved == false else { return }
+        let viewController = viewControllable.ui
+        guard let navigation = viewController.navigationController else { return }
+        let viewControllerIndex = navigation.children.lastIndex(of: viewController)
+        let targetViewControllerIndex = (viewControllerIndex ?? 0) - 1
+        guard targetViewControllerIndex >= 0 else { return }
+        let targetViewController = navigation.children[targetViewControllerIndex]
+        navigation.popToViewController(targetViewController, animated: animated)
     }
 }
