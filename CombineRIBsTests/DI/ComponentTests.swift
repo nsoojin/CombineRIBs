@@ -15,7 +15,7 @@
 //
 
 import XCTest
-@testable import ModernRIBs
+@testable import CombineRIBs
 
 final class ComponentTests: XCTestCase {
 

@@ -2,23 +2,23 @@
 import PackageDescription
 
 let package = Package(
-    name: "ModernRIBs",
+    name: "CombineRIBs",
     platforms: [
         .iOS(.v13),
     ],
     products: [
-        .library(name: "ModernRIBs", targets: ["ModernRIBs"]),
+        .library(name: "CombineRIBs", targets: ["CombineRIBs"]),
     ],
     targets: [
         .target(
-            name: "ModernRIBs",
-            path: "ModernRIBs",
+            name: "CombineRIBs",
+            path: "CombineRIBs",
             exclude: ["Info.plist"]
         ),
         .testTarget(
-            name: "ModernRIBsTests",
-            dependencies: ["ModernRIBs"],
-            path: "ModernRIBsTests",
+            name: "CombineRIBsTests",
+            dependencies: ["CombineRIBs"],
+            path: "CombineRIBsTests",
             exclude: ["Info.plist"]
         ),
     ]

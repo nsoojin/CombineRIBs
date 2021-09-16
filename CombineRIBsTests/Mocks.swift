@@ -14,7 +14,7 @@
 //  limitations under the License.
 //
 
-import ModernRIBs
+import CombineRIBs
 import Combine
 import UIKit
 

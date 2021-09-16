@@ -14,7 +14,7 @@
 //  limitations under the License.
 //
 
-@testable import ModernRIBs
+@testable import CombineRIBs
 import XCTest
 
 final class FoundationExtensionsTests: XCTestCase {

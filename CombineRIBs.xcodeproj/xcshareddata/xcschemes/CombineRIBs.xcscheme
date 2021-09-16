@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "8B9882E11F86E1CF00ABE009"
-               BuildableName = "ModernRIBs.framework"
-               BlueprintName = "ModernRIBs"
-               ReferencedContainer = "container:ModernRIBs.xcodeproj">
+               BuildableName = "CombineRIBs.framework"
+               BlueprintName = "CombineRIBs"
+               ReferencedContainer = "container:CombineRIBs.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -31,9 +31,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "8B9882E11F86E1CF00ABE009"
-            BuildableName = "ModernRIBs.framework"
-            BlueprintName = "ModernRIBs"
-            ReferencedContainer = "container:ModernRIBs.xcodeproj">
+            BuildableName = "CombineRIBs.framework"
+            BlueprintName = "CombineRIBs"
+            ReferencedContainer = "container:CombineRIBs.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <Testables>
@@ -42,9 +42,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "8B9882EA1F86E1CF00ABE009"
-               BuildableName = "ModernRIBsTests.xctest"
-               BlueprintName = "ModernRIBsTests"
-               ReferencedContainer = "container:ModernRIBs.xcodeproj">
+               BuildableName = "CombineRIBsTests.xctest"
+               BlueprintName = "CombineRIBsTests"
+               ReferencedContainer = "container:CombineRIBs.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -63,9 +63,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "8B9882E11F86E1CF00ABE009"
-            BuildableName = "ModernRIBs.framework"
-            BlueprintName = "ModernRIBs"
-            ReferencedContainer = "container:ModernRIBs.xcodeproj">
+            BuildableName = "CombineRIBs.framework"
+            BlueprintName = "CombineRIBs"
+            ReferencedContainer = "container:CombineRIBs.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </LaunchAction>
@@ -79,9 +79,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "8B9882E11F86E1CF00ABE009"
-            BuildableName = "ModernRIBs.framework"
-            BlueprintName = "ModernRIBs"
-            ReferencedContainer = "container:ModernRIBs.xcodeproj">
+            BuildableName = "CombineRIBs.framework"
+            BlueprintName = "CombineRIBs"
+            ReferencedContainer = "container:CombineRIBs.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>

@@ -16,7 +16,7 @@
 
 import XCTest
 import Combine
-@testable import ModernRIBs
+@testable import CombineRIBs
 
 final class WorkerflowTests: XCTestCase {
 

@@ -16,7 +16,7 @@
 
 import Combine
 import XCTest
-@testable import ModernRIBs
+@testable import CombineRIBs
 
 final class RouterTests: XCTestCase {
 
