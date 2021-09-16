@@ -28,4 +28,8 @@ public extension ViewControllable where Self: UIViewController {
     var uiviewController: UIViewController {
         return self
     }
+    
+    var isBeingRemoved: Bool {
+        return self.isBeingDismissed || self.isMovingFromParent || (self.navigationController?.isBeingDismissed == true)
+    }
 }
