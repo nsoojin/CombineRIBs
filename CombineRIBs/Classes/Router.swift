@@ -226,3 +226,14 @@ open class Router<InteractorType>: Routing {
         LeakDetector.instance.expectDeallocate(object: interactable)
     }
 }
+
+public extension Router {
+  
+  func hasNoChild<T>(typeOf type: T.Type) -> Bool {
+    return self.children.contains { $0 is T } == false
+  }
+  
+  func lastChild<T>(typeOf type: T.Type) -> T? {
+    return self.children.last { $0 is T } as? T
+  }
+}
