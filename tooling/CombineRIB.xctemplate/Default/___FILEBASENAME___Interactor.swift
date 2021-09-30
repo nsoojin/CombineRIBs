@@ -1,6 +1,6 @@
 import CombineRIBs
 
-public protocol ___VARIABLE_productName___Routing: Routing {
+protocol ___VARIABLE_productName___Routing: Routing {
   func cleanupViews()
 }
 

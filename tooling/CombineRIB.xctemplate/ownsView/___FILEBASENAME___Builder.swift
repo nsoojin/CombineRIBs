@@ -19,7 +19,7 @@ extension ___VARIABLE_productName___Component: ___VARIABLE_productName___RouterD
 // MARK: - Builder
 
 public protocol ___VARIABLE_productName___Buildable: Buildable {
-  func build(withListener listener: ___VARIABLE_productName___Listener) -> ___VARIABLE_productName___Routing
+  func build(withListener listener: ___VARIABLE_productName___Listener) -> ViewableRouting
 }
 
 public final class ___VARIABLE_productName___Builder: Builder<___VARIABLE_productName___Dependency>, ___VARIABLE_productName___Buildable {
@@ -28,7 +28,7 @@ public final class ___VARIABLE_productName___Builder: Builder<___VARIABLE_produc
     super.init(dependency: dependency)
   }
   
-  public func build(withListener listener: ___VARIABLE_productName___Listener) -> ___VARIABLE_productName___Routing {
+  public func build(withListener listener: ___VARIABLE_productName___Listener) -> ViewableRouting {
     let component = ___VARIABLE_productName___Component(dependency: self.dependency)
     let viewController = ___VARIABLE_productName___ViewController()
     let interactor = ___VARIABLE_productName___Interactor(presenter: viewController, dependency: component)
