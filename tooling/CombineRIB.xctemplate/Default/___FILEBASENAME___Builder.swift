@@ -7,20 +7,12 @@ public protocol ___VARIABLE_productName___Dependency: Dependency {
   // created by this RIB.
 }
 
-final class ___VARIABLE_productName___Component: Component<___VARIABLE_productName___Dependency> {
+final class ___VARIABLE_productName___Component: Component<___VARIABLE_productName___Dependency>, ___VARIABLE_productName___InteractorDependency, ___VARIABLE_productName___RouterDependency {
   
   // TODO: Make sure to convert the variable into lower-camelcase.
   fileprivate var ___VARIABLE_productName___ViewController: ___VARIABLE_productName___ViewControllable {
     return self.dependency.___VARIABLE_productName___ViewController
   }
-}
-
-extension ___VARIABLE_productName___Component: ___VARIABLE_productName___InteractorDependency {
-  
-}
-
-extension ___VARIABLE_productName___Component: ___VARIABLE_productName___RouterDependency {
-  
 }
 
 // MARK: - Builder

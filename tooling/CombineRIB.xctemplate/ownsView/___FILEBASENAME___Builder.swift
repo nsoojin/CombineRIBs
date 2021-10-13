@@ -4,15 +4,7 @@ public protocol ___VARIABLE_productName___Dependency: Dependency {
   
 }
 
-final class ___VARIABLE_productName___Component: Component<___VARIABLE_productName___Dependency> {
-  
-}
-
-extension ___VARIABLE_productName___Component: ___VARIABLE_productName___InteractorDependency {
-  
-}
-
-extension ___VARIABLE_productName___Component: ___VARIABLE_productName___RouterDependency {
+final class ___VARIABLE_productName___Component: Component<___VARIABLE_productName___Dependency>, ___VARIABLE_productName___InteractorDependency, ___VARIABLE_productName___RouterDependency {
   
 }
 
