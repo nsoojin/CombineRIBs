@@ -6,12 +6,8 @@ final class ___VARIABLE_productName___InteractorTests: XCTestCase {
   
   private var interactor: ___VARIABLE_productName___Interactor!
   
-  // TODO: declare other objects and mocks you need as private vars
-  
   override func setUpWithError() throws {
     try super.setUpWithError()
-    
-    // TODO: instantiate objects and mocks
   }
   
   // MARK: - Tests
