@@ -51,9 +51,7 @@ public extension ViewControllable {
     
     func dismissViewControllableIfNeeded(_ viewControllable: ViewControllable, animated: Bool, completion: (() -> Void)? = nil) {
         guard viewControllable.isBeingRemoved == false else { return }
-        let viewController = viewControllable.ui
-        guard let presenting = viewController.presentingViewController else { return }
-        presenting.dismiss(animated: animated, completion: completion)
+        self.ui.dismiss(animated: animated, completion: completion)
     }
     
     func pushViewControllable(_ viewControllable: ViewControllable, animated: Bool) {
