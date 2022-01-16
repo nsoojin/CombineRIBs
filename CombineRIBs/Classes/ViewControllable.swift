@@ -35,9 +35,7 @@ public extension ViewControllable {
     var ui: UIViewController { self.uiviewController }
     
     var isBeingRemoved: Bool {
-        return self.ui.isBeingDismissed ||
-            self.ui.isMovingFromParent ||
-            (self.ui.navigationController?.isBeingDismissed == true)
+        return self.ui.isBeingRemoved
     }
     
     func presentViewControllable(_ viewControllable: ViewControllable, animated: Bool, style: UIModalPresentationStyle? = nil, completion: (() -> Void)? = nil) {
@@ -51,6 +49,11 @@ public extension ViewControllable {
     
     func dismissViewControllableIfNeeded(_ viewControllable: ViewControllable, animated: Bool, completion: (() -> Void)? = nil) {
         guard viewControllable.isBeingRemoved == false else { return }
+        self.ui.dismiss(animated: animated, completion: completion)
+    }
+  
+    func dismissViewControllable(animated: Bool, completion: (() -> Void)? = nil) {
+        guard self.ui.presentedViewController?.isBeingRemoved == false else { return }
         self.ui.dismiss(animated: animated, completion: completion)
     }
     
@@ -69,5 +72,13 @@ public extension ViewControllable {
         guard targetViewControllerIndex >= 0 else { return }
         let targetViewController = navigation.children[targetViewControllerIndex]
         navigation.popToViewController(targetViewController, animated: animated)
+    }
+}
+
+private extension UIViewController {
+    var isBeingRemoved: Bool {
+        return self.isBeingDismissed ||
+            self.isMovingFromParent ||
+            (self.navigationController?.isBeingDismissed == true)
     }
 }
