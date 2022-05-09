@@ -26,13 +26,12 @@ final class ___VARIABLE_productName___Interactor: Interactor, ___VARIABLE_produc
   
   override func didBecomeActive() {
     super.didBecomeActive()
-    // TODO: Implement business logic here.
+
   }
   
   override func willResignActive() {
     super.willResignActive()
     
     router?.cleanupViews()
-    // TODO: Pause any business logic.
   }
 }
